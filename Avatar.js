@@ -21,7 +21,7 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 
-import ImagePicker from 'react-native-image-picker';
+import {showImagePicker} from 'react-native-image-picker';
 
 const AVATAR_OPTIONS = {
     title: 'Pick your image',
@@ -117,7 +117,7 @@ export default class Avatar extends Component {
     state = {};
 
     handleInteractivePress = () => {
-        ImagePicker.showImagePicker(
+        showImagePicker(
             {
                 ...AVATAR_OPTIONS,
                 ...this.props.pickerOptions,
